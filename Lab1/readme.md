@@ -1,1 +1,0 @@
-Ao executar o programa, o "Hello World" aparece no Terminal I/O (acessível a partir do menu View)

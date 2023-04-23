@@ -9,9 +9,9 @@
         <debug>1</debug>
         <settings>
             <name>C-STAT</name>
-            <archiveVersion>515</archiveVersion>
+            <archiveVersion>516</archiveVersion>
             <data>
-                <version>515</version>
+                <version>516</version>
                 <cstatargs>
                     <useExtraArgs>0</useExtraArgs>
                     <extraArgs></extraArgs>
@@ -22,10 +22,10 @@
                     <enableFalsePositives>0</enableFalsePositives>
                     <messagesLimitEnabled>1</messagesLimitEnabled>
                     <messagesLimit>100</messagesLimit>
-                    <outputDir>Debug\C-STAT</outputDir>
+                    <outputDir>Debug/C-STAT</outputDir>
                 </cstatargs>
                 <cstat_settings>
-                    <cstat_version>2.3.1</cstat_version>
+                    <cstat_version>2.4.0</cstat_version>
                     <checks_tree>
                         <package name="STDCHECKS" enabled="true">
                             <group enabled="true" name="ARR">
@@ -841,6 +841,8 @@
                                 <check name="MISRAC2012-Rule-1.3_u" enabled="true" />
                                 <check name="MISRAC2012-Rule-1.3_v" enabled="true" />
                                 <check name="MISRAC2012-Rule-1.3_w" enabled="true" />
+                                <check name="MISRAC2012-Rule-1.4_a" enabled="true" />
+                                <check name="MISRAC2012-Rule-1.4_b" enabled="true" />
                             </group>
                             <group enabled="true" name="MISRAC2012-Rule-2">
                                 <check name="MISRAC2012-Rule-2.1_a" enabled="true" />
@@ -1063,6 +1065,7 @@
                                 <check name="MISRAC2012-Rule-21.19_a" enabled="true" />
                                 <check name="MISRAC2012-Rule-21.19_b" enabled="true" />
                                 <check name="MISRAC2012-Rule-21.20" enabled="true" />
+                                <check name="MISRAC2012-Rule-21.21" enabled="true" />
                             </group>
                             <group enabled="true" name="MISRAC2012-Rule-22">
                                 <check name="MISRAC2012-Rule-22.1_a" enabled="true" />
@@ -1428,9 +1431,9 @@
         <debug>0</debug>
         <settings>
             <name>C-STAT</name>
-            <archiveVersion>515</archiveVersion>
+            <archiveVersion>516</archiveVersion>
             <data>
-                <version>515</version>
+                <version>516</version>
                 <cstatargs>
                     <useExtraArgs>0</useExtraArgs>
                     <extraArgs></extraArgs>
@@ -1441,10 +1444,10 @@
                     <enableFalsePositives>0</enableFalsePositives>
                     <messagesLimitEnabled>1</messagesLimitEnabled>
                     <messagesLimit>100</messagesLimit>
-                    <outputDir>Release\C-STAT</outputDir>
+                    <outputDir>Release/C-STAT</outputDir>
                 </cstatargs>
                 <cstat_settings>
-                    <cstat_version>2.3.1</cstat_version>
+                    <cstat_version>2.4.0</cstat_version>
                     <checks_tree>
                         <package name="STDCHECKS" enabled="true">
                             <group enabled="true" name="ARR">
@@ -2260,6 +2263,8 @@
                                 <check name="MISRAC2012-Rule-1.3_u" enabled="true" />
                                 <check name="MISRAC2012-Rule-1.3_v" enabled="true" />
                                 <check name="MISRAC2012-Rule-1.3_w" enabled="true" />
+                                <check name="MISRAC2012-Rule-1.4_a" enabled="true" />
+                                <check name="MISRAC2012-Rule-1.4_b" enabled="true" />
                             </group>
                             <group enabled="true" name="MISRAC2012-Rule-2">
                                 <check name="MISRAC2012-Rule-2.1_a" enabled="true" />
@@ -2482,6 +2487,7 @@
                                 <check name="MISRAC2012-Rule-21.19_a" enabled="true" />
                                 <check name="MISRAC2012-Rule-21.19_b" enabled="true" />
                                 <check name="MISRAC2012-Rule-21.20" enabled="true" />
+                                <check name="MISRAC2012-Rule-21.21" enabled="true" />
                             </group>
                             <group enabled="true" name="MISRAC2012-Rule-22">
                                 <check name="MISRAC2012-Rule-22.1_a" enabled="true" />
@@ -2839,7 +2845,19 @@
             </data>
         </settings>
     </configuration>
-    <file>
-        <name>$PROJ_DIR$\main.cpp</name>
-    </file>
+    <group>
+        <name>Libraries</name>
+        <file>
+            <name>$PROJ_DIR$\..\TivaWare_C_Series-2.2.0.295\driverlib\ewarm\Exe\driverlib.a</name>
+        </file>
+    </group>
+    <group>
+        <name>Source</name>
+        <file>
+            <name>$PROJ_DIR$\blinky.c</name>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\startup_ewarm.c</name>
+        </file>
+    </group>
 </project>
